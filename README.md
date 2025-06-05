@@ -35,7 +35,37 @@ A continuación, se detalla paso a paso cómo configurar el entorno y ejecutar e
  -Crear una nueva base de datos con el nombre `tienda`.
  -Importá el archivo `.sql` correspondiente a dicha base.
 
-5. Ejecutar la aplicación
+5. Configurar el inicio de sesión con Google
+ a. Crear credenciales en Google API Console
+ 1. Ingresá a [Google API Console](https://console.developers.google.com/).
+ 2. Creá un nuevo proyecto.
+ 3. Configurá la **pantalla de consentimiento OAuth**:
+   -Seleccioná tipo de usuario: `External`.
+   -Agregá los permisos: `email` y `profile`.
+ 4. En la sección de credenciales:
+    Seleccioná "Crear credencial" > OAuth client ID.
+    Tipo de aplicación: `Web application`.
+    Ingresá el siguiente URI de redirección autorizado:
+      http://localhost/DemoCrud4/index.php
+    Guardá el Client ID y Client Secret generados.
+ 5. Reemplazá esos valores en el archivo `config.php` del proyecto:
+    `client_id`
+    `client_secret`
+b. Instalar Composer
+  -Descargá e instalá Composer desde: [https://getcomposer.org/download/](https://getcomposer.org/download/)
+
+c. Instalar dependencias del cliente de Google
+ 1. Copiá los archivos del proyecto a la carpeta `C:\xampp\htdocs\DemoCrud4`.
+ 2. Abrí una ventana de comandos como administrador y dirigite a la carpeta del proyecto.
+ 3. Ejecutá el siguiente comando:
+ 
+    ```bash
+    composer require google/apiclient:"^2.12.1"
+    ```
+ 
+    > Nota: este proceso puede tardar algunos minutos dependiendo de tu conexión.
+
+6. Ejecutar la aplicación
 
  -Abrí tu navegador y accedé al siguiente enlace: [http://localhost/index.php](http://localhost/index.php)
  -¡Listo! Ya podés comenzar a usar el programa.
