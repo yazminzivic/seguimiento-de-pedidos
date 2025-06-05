@@ -1,22 +1,42 @@
-# Login-Google
-Login Basico Google
-Primero debemos generan en Google API Console (gestion de client id y su token)
+Pasos para ejecutar correctamente el proyecto
 
-https://console.developers.google.com/
+A continuación, se detalla paso a paso cómo configurar el entorno y ejecutar el sistema localmente:
 
-dentro de Google crear el proyecto . 
-configurar el consentimiento de usuario
-gestionar el secret client id y token (luego reemplazar el client id y el token en el archivo config.php)
+1. Descargar e instalar XAMPP
+ -Accedé al siguiente enlace: [https://www.apachefriends.org/es/index.html](https://www.apachefriends.org/es/index.html).
+ -Descargá e instalá la versión correspondiente a tu sistema operativo.
 
-configuracion de consentimiento (user external / permisos user email , user profile) 
-crear OAuth client id  - web application -  autorized redirect URI (ej . http://localhost/DemoCrud4/index.php) 
+2. Preparar la carpeta del proyecto
 
-instalar en la computadora local o en el servidor el composer https://getcomposer.org/download/
+ -Asegurate de que no haya archivos en la carpeta `C:\xampp\htdocs`. En caso de que los haya, se recomienda vaciarla para evitar conflictos.
+ -Descargá el archivo `.zip` del proyecto.
+ -Extraé el contenido del `.zip` directamente dentro de la carpeta `C:\xampp\htdocs`.
 
-copiar los archivos del proyecto a la carpeta Democrud4 dentro de HTDOCS 
+3. Iniciar servicios necesarios en XAMPP
 
-ejecutar en la carpeta del proyecto en ventana de comandoscomo administrador el siguiente comando
+ -Abrí el panel de control de XAMPP.
+ -Iniciá los servicios **Apache** y **MySQL** haciendo clic en el botón **Start** de cada uno.
 
-composer require google/apiclient:"^2.12.1"  (puede demorar unos minutos segun la conexion) 
+4. Importar las bases de datos
 
-luego ejecutar en el navegador HTTP://LOCALHOST/DEMOCRUD4/index.php
+4.1. Accedé a **phpMyAdmin** desde tu navegador mediante el enlace: [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/).
+   Alternativamente, podés hacer clic en el botón **Admin** de la fila de MySQL en el panel de control de XAMPP.
+
+4.2. Crear la base de datos **registro**:
+
+ -Hacé clic en **New** (en el panel izquierdo).
+ -Ingresá el nombre `registro` en el campo **Database name**.
+ -Hacé clic en **Create**.
+ -Una vez creada, ingresá a la base de datos, hacé clic en la pestaña **Import**.
+ -Seleccioná el archivo `.sql` correspondiente a la base de datos `registro` y luego hacé clic en **Importar**.
+
+4.3. Repetí el mismo proceso para crear la base de datos **tienda**:
+
+ -Crear una nueva base de datos con el nombre `tienda`.
+ -Importá el archivo `.sql` correspondiente a dicha base.
+
+5. Ejecutar la aplicación
+
+ -Abrí tu navegador y accedé al siguiente enlace: [http://localhost/index.php](http://localhost/index.php)
+ -¡Listo! Ya podés comenzar a usar el programa.
+
