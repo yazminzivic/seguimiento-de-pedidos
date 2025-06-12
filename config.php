@@ -11,8 +11,8 @@ require_once 'vendor/autoload.php';
 $google_client = new Google_Client();
 
 // Configurar credenciales
-$google_client->setClientId('727283115644-7a620c038j7k3sv8hd57rrpkhpvulee8.apps.googleusercontent.com');
-$google_client->setClientSecret('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');
+$google_client->setClientId('727283115644-xxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com');
+$google_client->setClientSecret('GOCSPX-xxxxxxxxxxxxxx');
 
 // Establecer URI de redirección (este archivo debe coincidir con el URI configurado en la consola de Google)
 $google_client->setRedirectUri('http://localhost/index.php');
